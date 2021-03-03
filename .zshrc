@@ -158,7 +158,7 @@ alias digiprimary='ssh root@157.245.245.149'
 ###########################
 #PATHS
 ###########################
-export PATH=/Users/schoen/apache-maven-3.5.2/bin:$PATH
+#export PATH=/Users/schoen/apache-maven-3.5.2/bin:$PATH
 
 ###########################
 #CUSTOM FUNCTIONS
