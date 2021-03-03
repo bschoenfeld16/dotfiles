@@ -245,6 +245,29 @@ dirm() {
 	docker image rm "$1"
 }
 
+
+###########################
+#MAC FUNCTIONS
+###########################
+showall() {
+	defaults write com.apple.finder AppleShowAllFiles -bool TRUE
+	killall Finder
+}
+
+addspace() {
+	defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+	killall Dock
+}
+
+addstack() {
+	defaults write com.apple.dock persistent-others -array-add '{"tile-data" = {"list-type" = 2;}; "tile-type" = "recents-tile";}'
+	killall Dock
+}
+
+chromelight() {
+	defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool YES
+}
+
 kuc() {
 	if [ $1 = "ed" ]; then
 		kubectl config use-context elrihr-ihr-b50-iae-dev
