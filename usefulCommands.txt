@@ -13,4 +13,6 @@ Add stacks to dock
 Switch Chrome dark mode
 	defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool YES
 
+Dim hidden apps
+	defaults write com.apple.Dock showhidden -boolean yes; killall Dock
 
