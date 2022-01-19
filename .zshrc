@@ -70,7 +70,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	zsh-autosuggestions
-	osx
+	macos
 	zsh-syntax-highlighting
 )
 
@@ -132,8 +132,8 @@ alias refreshclient='curl -X POST http://dev-sc-wrapper-laww-config.ocp-elr-core
 alias refreshlocalclient='curl -X POST http://localhost:8088/actuator/refresh'
 
 ## Aliases to switch java versions ##
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
-alias j13="export JAVA_HOME=`/usr/libexec/java_home -v 13`; java -version"
+#alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+#alias j13="export JAVA_HOME=`/usr/libexec/java_home -v 13`; java -version"
 
 ## File compare Alias ##
 #alias compareFiles='perl -ne 'print if ($seen{$_} .= @ARGV) =~ /10$/''
@@ -163,6 +163,12 @@ alias digiprimary='ssh root@157.245.245.149'
 ###########################
 #CUSTOM FUNCTIONS
 ###########################
+## ll with grep #
+llg() {
+	ll | grep "$1"
+}
+
+
 ## parseGitBranch #
 parseGitBranch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
