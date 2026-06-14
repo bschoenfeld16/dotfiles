@@ -8,3 +8,5 @@ nnoremap vv <c-v>
 imap jk <Esc>
 vmap > >gv
 vmap < <gv
+map H ^
+map L $
